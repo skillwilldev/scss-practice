@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+.contact-section {
+    padding: v.$gap-large 0;
+    text-align: center;
+
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: v.$gap-medium;
+
+        .form-group {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+
+            textarea {
+                resize: vertical;
+            }
+
+            input,
+            textarea {
+                padding: 12px;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-family: v.$main-font;
+                transition: border-color v.$transition-speed;
+
+                &:focus {
+                    border-color: v.$primary-color;
+                    outline: none;
+                }
+            }
+
+            label:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

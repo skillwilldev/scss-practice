@@ -1,0 +1,29 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.services {
+    padding: 80px 0;
+    background-color: v.$bg-color;
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        @include m.card-shadow; // ჩვენი შექმნილი მიქსინი
+        background: white;
+        text-align: center;
+        transition: transform 0.3s ease; // აი აქ ვწერთ თრანზიშენს
+
+        &:hover {
+            transform: translateY(-10px); // ბარათი ზემოთ აიწევა ჰოვერზე
+
+        }
+
+        h3 {
+            color: v.$primary-color;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+
+.main-header {
+    height: 60vh;
+    background-color: v.$primary-color;
+    color: v.$dark-text;
+    @include m.flex-center; //ვიყენებთ მიქსინს
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: v.$secondary-color;
+    color: v.$white;
+    border-radius: 4px;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: v.$secondary-color;
+        transform: translateY(-3px);
+    }
+}

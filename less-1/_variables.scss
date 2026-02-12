@@ -1,0 +1,28 @@
+@use "sass:color";
+
+$primary-color: #10da8d;
+$secondary-color: #a12158;
+$dark-text: #0e0707;
+$bg-color: #f9f9f9;
+$white: #ffffff;
+$font-stack: 'Segou UI', Tahoma;
+$main-font: 'Poppins', sans-serif;
+$font-lg: 2.5rem;
+$font-md: 1.5rem;
+$font-sm: 1rem;
+
+$gap-small: 10px;
+$gap-medium: 20px;
+$gap-large: 50px;
+
+
+$primary-color: #3498db;
+
+$primary-light: color.scale($primary-color, $lightness: 20%);
+$primary-dark: color.adjust($primary-color, $lightness: -15%);
+
+$transition-speed: 0.3s ease-in-out;
+// $primary-light: lighten($primary-color, 20%); // ავტომატურად გააღიავებს
+// $primary-dark: darken($primary-color, 15%); //ავტომატურად გაამუქებს
+
+// $overlay-black: rgba(0, 0, 0, 0.5);
