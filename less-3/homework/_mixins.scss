@@ -1,0 +1,16 @@
+//  @use "sass:color";
+ @use './variables' as v;
+
+ @mixin btn {
+     background: v.$primary-color;
+     color: white;
+     padding: 8px 16px;
+     border-radius: 6px;
+     text-decoration: none;
+     font-size: 0.85rem;
+
+     &:hover {
+          background: darken(v.$primary-color, 10%); // 10%-ით გამუქდება
+         //background: color.adjust(v.$primary-color, $lightness: -10%);
+     }
+ }

@@ -1,0 +1,71 @@
+//  @use "sass:color";
+ @use './mixins' as m;
+ @use './variables' as v;
+
+
+
+ //ძირითადი სტილები
+ body {
+     font-family: v.$font-main;
+     background-color: v.$bg-color;
+     margin: 0;
+     padding: 20px;
+ }
+
+ .course-container {
+     display: flex;
+     gap: 20px;
+     max-width: 1200px;
+     margin: 0 auto;
+ }
+
+ .course-card {
+     border-radius: v.$border-radius;
+     overflow: hidden;
+     box-shadow: v.$card-shadow-hover;
+     transition: v.$transition;
+
+     &:hover {
+         transform: translateY(-5px);
+         box-shadow: v.$card-shadow-hover;
+     }
+
+     &__image {
+         width: 100%;
+         height: 100px;
+         background: v.$primary-color; // დროებითი ფონი სურათის ნაცვლად
+         object-fit: cover;
+     }
+
+     &__content {
+         padding: 20px;
+
+         h3 {
+             color: v.$accent-color;
+             margin-bottom: 10px;
+         }
+
+         p {
+             color: lighten(v.$text-dark, 20%); // 20%-ით გაღიავდება
+             //background: color.adjust(v.$primary-color, $lightness: 20%);
+             font-size: 0.9rem;
+         }
+     }
+
+     &__footer {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 15px 20px;
+         border-top: 1px solid #eee;
+
+         .price {
+             font-weight: bold;
+             color: v.$secondary-color;
+         }
+
+         .btn-join {
+             @include m.btn;
+         }
+     }
+ }
