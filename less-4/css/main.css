@@ -1,0 +1,70 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+.row .col-6 {
+  width: calc(50% - 20px);
+}
+@media (max-width: 768px) {
+  .row .col-6 {
+    width: 100%;
+  }
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+}
+.btn-primary:hover {
+  background-color: rgb(29.2970711297, 110.6778242678, 165.2029288703);
+}
+.btn-primary {
+  font-size: 16px;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 10px 20px;
+}
+.btn-danger:hover {
+  background-color: rgb(190.9931506849, 39.1780821918, 23.5068493151);
+}
+.btn-danger {
+  font-size: 16px;
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 20px;
+}
+.btn-success:hover {
+  background-color: rgb(31.924, 141.576, 78.422);
+}
+.btn-success {
+  font-size: 16px;
+}
+
+.product-card {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card {
+  padding: 25px;
+  border: 1px solid #ececec;
+}
+
+/*# sourceMappingURL=main.css.map */

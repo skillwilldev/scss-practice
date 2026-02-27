@@ -1,0 +1,79 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:math";
+
+// 1. ფერების კონფიგურაცია
+$theme-colors: (
+  "primary": #3498db,
+  "danger": #e74c3c,
+  "success": #2ecc71
+); // 1. დაემატა წერტილ-მძიმე (;)
+
+// 2. ფუნქცია ფერის ამოსაღებად
+@function get-color($key) {
+  @return map.get($theme-colors, $key); // 2. დაემატა $ ნიშანი ცვლადისთვის
+}
+
+// 3. ზომები და რესპონსივი
+$container-width: 1200px;
+$mobile-breakpoint: 768px; // 3. მოცილდა ბრჭყალები (რიცხვი უნდა იყოს და არა ტექსტი)
+
+@mixin tablet {
+  @media (max-width: $mobile-breakpoint) {
+    @content;
+  }
+}
+
+// 4. სტრუქტურა
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  
+  @include tablet { // 4. მიქსინის გამოსაძახებლად საჭიროა @include
+    width: 100%; // 5. დაემატა წერტილ-მძიმე
+  }
+}
+
+// 5. Grid სისტემა
+.row {
+  display: flex;
+  gap: 20px;
+
+  .col-6 {
+    // 6. მათემატიკური მოქმედებისთვის გამოიყენება math.div, რადგან / დაძველდა
+    width: calc(50% - 20px); 
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+}
+
+// 6. ღილაკების გენერატორი (Loop)
+@each $name, $color in $theme-colors { // 7. დაემატა $ ცვლადის წინ
+  .btn-#{$name} {
+    background-color: $color;
+    color: #fff;
+    padding: 10px 20px;
+
+    &:hover { // 8. დაემატა & ნიშანი მშობელი სელექტორისთვის
+      background-color: color.adjust($color, $lightness: -15%);
+    }
+
+    font-size: 14px + 2px; // 9. მოცილდა ბრჭყალები (რიცხვს ტექსტს ვერ მივუმატებთ)
+  }
+}
+
+// 7. საერთო სტილები
+$border-light: #ececec; // 10. ცვლადი უნდა იყოს გამოყენებამდე განსაზღვრული
+
+%shared-card {
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card {
+  @extend %shared-card; // 11. დაემატა % ნიშანი placeholder-ისთვის
+  padding: 25px;
+  border: 1px solid $border-light;
+}
