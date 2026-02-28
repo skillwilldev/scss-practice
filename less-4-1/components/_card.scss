@@ -1,0 +1,36 @@
+.container {
+    padding: 50px;
+    @include flex-center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.card {
+    width: 300px;
+    background: $white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba($color: #000000, $alpha: 1.0);
+    transition: transform .3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+
+    }
+
+    &__image img {
+        width: 100%;
+        display: block;
+    }
+
+    &__content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 20px;
+    }
+}

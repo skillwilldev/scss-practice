@@ -1,0 +1,9 @@
+@use './abstracts/variables';
+@use './abstracts/mixin';
+@use './layout/header';
+@use './components/buttons';
+@use './components/card';
+
+body {
+    margin: 0;
+}

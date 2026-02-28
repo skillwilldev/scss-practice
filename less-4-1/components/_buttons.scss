@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as v;
+
+.btn {
+    padding: 10px 20px;
+    border-radius: v.$border-radius;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
