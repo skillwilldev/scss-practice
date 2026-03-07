@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f4f6;
+}
+
+.chat-wrapper {
+  width: 100vh;
+  max-width: 450px;
+  height: 650px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.chat-wrapper .chat-window {
+  width: 100%;
+  max-width: 450px;
+  height: 650px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.chat-wrapper .chat-window .chat-header {
+  padding: 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-wrapper .chat-window .chat-header .bot-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .avatar {
+  position: relative;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .avatar img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .avatar img .online-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: #10b981;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .avatar .details h1 {
+  font-size: 1rem;
+  color: #1f2937;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .avatar .details p {
+  font-size: 0.8rem;
+  color: #10b981;
+  font-weight: 500;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .action {
+  color: #6b7280;
+  cursor: pointer;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content {
+  flex: 1;
+  padding: 20px;
+  overflow-x: auto;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message {
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message .bubble {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.1);
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message .time {
+  font-size: 0.7rem;
+  color: #6b7280;
+  margin-top: 5px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message.bot {
+  align-self: flex-start;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message.bot .bubble {
+  background-color: #f9fafb;
+  color: #1f2937;
+  border-radius: 0 16px 16px 16px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message.user {
+  align-self: flex-end;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message.user .bubble {
+  background-color: #4a45a0;
+  color: #ffffff;
+  border-radius: 16px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message .typing {
+  display: flex;
+  gap: 4px;
+}
+.chat-wrapper .chat-window .chat-header .bot-info .chat-content .message .typing span {
+  width: 6px;
+  height: 6px;
+  background-color: #6b7280;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+/*# sourceMappingURL=style.css.map */
