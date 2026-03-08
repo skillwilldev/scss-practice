@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="./css/style.css">
     <title>Premium Chatbot UI</title>
+   <link rel="shortcut icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" type="image/x-icon">
+   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <div class="chat-wrapper">
         <section class="chat-window">
             <header class="chat-header">
                 <div class="bot-info">
                     <div class="avatar">
-                        <img src="" alt="">
+                        <img src="avatarchatbot.jpeg" alt="botavatar">
                         <span class="online-indicator"></span>
                     </div>
                     <div class="details">
@@ -23,14 +21,14 @@
                         <p>ონლაინშია</p>
                     </div>
                 </div>
-                <div class="action">
+                <div class="actions">
                     <i class="fas fa-ellipsis-v"></i>
                 </div>
             </header>
-            <main class="chat-container">
+            <main class="chat-content">
                 <div class="message bot">
                     <div class="bubble">
-                        გამარჯომა! მე ვარ თქვენი პერსონალური ასისტენტი, რით შიმიძლია დაგეხმაროთ?
+                        გამარჯობა! მე ვარ თქვენი პერსონალური ასისტენტი,რით შემიძლია დაგეხმაროთ?
                     </div>
                     <span class="time">12:45 PM</span>
                 </div>
@@ -47,14 +45,13 @@
                     <i class="fas fa-plus"></i>
                 </button>
                 <div class="input-container">
-                    <input type="text" placeholder="ჩაწერეთ შეტყობინება..." outocomplate="off">
+                    <input type="text" placeholder="ჩაწერეთ შეტყობინება..." autocomplete="off">
                     <button class="send-btn">
                         <i class="fas fa-paper-plane"></i>
-                    </button>
+                    </button> 
                 </div>
             </footer>
         </section>
     </div>
 </body>
-
 </html>
