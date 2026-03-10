@@ -1,0 +1,317 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "sass:color";
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+
+
+body {
+  font-family: v.$font-poppins;
+  background-color: v.$white;
+  color: v.$text-color;
+  line-height: 1.6;
+}
+
+button {
+  font-family: inherit;
+  background-color: transparent;
+
+  &:active {
+    transform: scale(96%);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: v.$primary-color;
+}
+
+
+.site-header {
+  background-color: v.$primary-color;
+  padding: v.$padding-md v.$padding-lg;
+  @include m.flex-layout(space-between, center);
+}
+
+.logo {
+  @include m.flex-layout(flex-start, center);
+  gap: v.$padding-sm;
+
+  &__icon {
+    font-size: 1.6rem;
+    color: v.$accent-color;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+}
+
+.main-nav {
+  &__list {
+    list-style: none;
+    @include m.flex-layout(flex-end, center);
+    gap: v.$padding-md;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    color: #ffffff;
+    font-weight: 500;
+
+    &:hover {
+      color: v.$accent-color;
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav-toggle {
+    display: block;
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .main-nav {
+    display: none;
+  }
+}
+
+
+
+.hero {
+  padding: v.$padding-lg * 2 v.$padding-lg;
+  text-align: center;
+  background-color: v.$secondary-color;
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: v.$text-color;
+    margin-bottom: v.$padding-md;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: v.$text-color;
+    opacity: 0.7;
+    margin-bottom: v.$padding-lg;
+  }
+
+  &__actions {
+    @include m.flex-layout(center, center);
+    gap: v.$padding-md;
+    flex-wrap: wrap;
+  }
+}
+
+
+.features {
+  padding: v.$padding-lg;
+}
+
+.cards-grid {
+  @include m.flex-layout(center, stretch);
+  flex-wrap: wrap;
+  gap: v.$padding-md;
+  margin-top: v.$padding-lg;
+}
+
+.card {
+  @include m.responsive-card;
+
+  background-color: v.$secondary-color;
+  border-radius: v.$radius-round;
+  padding: v.$padding-md;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  &__icon {
+    font-size: 2rem;
+    margin-bottom: v.$padding-sm;
+    display: block;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: v.$primary-color;
+    margin-bottom: v.$padding-sm;
+  }
+
+  &__body {
+    font-size: 0.95rem;
+    opacity: 0.75;
+    margin-bottom: v.$padding-md;
+  }
+
+  &__link {
+    color: v.$accent-color;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  font-family: inherit;
+
+  &--primary {
+    @include m.button-style(v.$primary-color, #ffffff);
+  }
+
+  &--outline {
+    @include m.button-style(transparent, v.$primary-color);
+    border: 2px solid v.$primary-color;
+  }
+
+  &--accent {
+    @include m.button-style(v.$accent-color, #ffffff);
+  }
+}
+
+.button-section {
+  padding: v.$padding-lg;
+  text-align: center;
+}
+
+.button-showcase {
+  @include m.flex-layout(center, center);
+  flex-wrap: wrap;
+  gap: v.$padding-md;
+  margin-top: v.$padding-lg;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.button-label {
+  font-size: 0.75rem;
+  color: v.$text-color;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+
+body.dark-mode {
+  background-color: v.$dark-bg;
+  color: v.$dark-text;
+
+  .site-header {
+    background-color: color.adjust(v.$primary-color, $lightness: -10%);
+  }
+
+  .card {
+    background-color: color.adjust(v.$dark-bg, $lightness: 8%);
+    color: v.$dark-text;
+  }
+
+  .hero {
+    background-color: color.adjust(v.$dark-bg, $lightness: -4%);
+  }
+
+  .button-section {
+    background-color: color.adjust(v.$dark-bg, $lightness: -4%);
+  }
+
+  .button-label {
+    color: v.$dark-text;
+  }
+
+  h1,
+  .hero__subtitle,
+  h2,
+  .card__icon i,
+  .card__body,
+  .button-section p,
+  .bonus-section>p {
+    color: v.$white;
+
+    code {
+      color: v.$white;
+    }
+  }
+
+  .bonus-section code {
+    color: v.$text-color;
+  }
+
+
+
+}
+
+
+// FOOTER & MISC
+.site-footer {
+  background-color: v.$primary-color;
+  color: #ffffff;
+  text-align: center;
+  padding: v.$padding-md;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: v.$text-color;
+  margin-bottom: v.$padding-sm;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: v.$text-color;
+  opacity: 0.6;
+  margin-bottom: v.$padding-md;
+}
+
+.bonus-hint {
+  display: inline-block;
+  text-align: left;
+  margin-top: v.$padding-md;
+
+  pre {
+    background-color: v.$secondary-color;
+    border-radius: v.$radius-sharp;
+    padding: v.$padding-md;
+    overflow-x: auto;
+    font-size: 0.85rem;
+  }
+}
+
+.bonus-section .theme {
+  margin-bottom: 20px;
+}

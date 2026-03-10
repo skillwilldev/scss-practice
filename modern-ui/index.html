@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Modern UI Component Library</title>
+
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="site-wrapper">
+
+
+  <header class="site-header">
+
+    <!-- ლოგო -->
+    <div class="logo">
+      <span class="logo__icon"><i class="fa-brands fa-apple"></i></span>
+      <span class="logo__text">UIKit</span>
+    </div>
+
+    <!-- ნავიგაცია -->
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#features" class="main-nav__link">Features</a></li>
+        <li class="main-nav__item"><a href="#buttons" class="main-nav__link">Buttons</a></li>
+        <li class="main-nav__item"><a href="#about" class="main-nav__link">About</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero__title">Modern UI <em>Component Library</em></h1>
+      <p class="hero__subtitle">
+        მხოლოდ ცვლადების შეცვლით — მთელი საიტი იცვლება <i class="fa-solid fa-comment"></i>
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary">დაიწყე →</button>
+        <button class="btn btn--outline">გაიგე მეტი</button>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <h2 class="section-title">რატომ SCSS?</h2>
+
+      <div class="cards-grid">
+
+
+        <article class="card">
+          <div class="card__icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <h3 class="card__title">ცვლადები</h3>
+          <p class="card__body">
+            ერთხელ განსაზღვრე ფერები და ზომები —
+            შემდეგ გამოიყენე მთელ პროექტში.
+            ერთი ცვლილება = ყველგან განახლება.
+          </p>
+          <a href="#" class="card__link">გაიგე მეტი →</a>
+        </article>
+
+
+        <article class="card">
+          <div class="card__icon"><i class="fa-brands fa-shopify"></i></div>
+          <h3 class="card__title">მიქსინები</h3>
+          <p class="card__body">
+            გამეორებადი სტილ-ბლოკები გადააქციე
+            ფუნქციებად. არგუმენტები — მოქნილობა.
+            @include ერთხელ, გამოიყენე ყველგან.
+          </p>
+          <a href="#" class="card__link">გაიგე მეტი →</a>
+        </article>
+
+
+        <article class="card">
+          <div class="card__icon"><i class="fa-solid fa-moon"></i></div>
+          <h3 class="card__title">Dark Mode</h3>
+          <p class="card__body">
+            შეცვალე მხოლოდ $bg-color და $text-color —
+            მთელი საიტი გადადის Dark Mode-ში
+            ყოველგვარი სხვა ცვლილების გარეშე.
+          </p>
+          <a href="#" class="card__link">სცადე →</a>
+        </article>
+
+      </div>
+    </section>
+    <section class="button-section" id="buttons">
+      <h2 class="section-title">Button System</h2>
+      <p class="section-subtitle">ორი ტიპი — ერთი მიქსინი, განსხვავებული არგუმენტები</p>
+
+      <div class="button-showcase">
+
+        <div class="button-group">
+          <span class="button-label">Primary</span>
+          <button class="btn btn--primary">Primary Button</button>
+        </div>
+
+        <div class="button-group">
+          <span class="button-label">Outline</span>
+          <button class="btn btn--outline">Outline Button</button>
+        </div>
+
+        <div class="button-group">
+          <span class="button-label">Accent (ბონუს)</span>
+          <button class="btn btn--accent">Accent Button</button>
+        </div>
+
+      </div>
+    </section>
+    <section class="bonus-section" id="about">
+      <h2 class="section-title"><i class="fa-solid fa-moon"></i> Dark Mode — ბონუს დავალება</h2>
+      <p class="section-subtitle">
+        ღილაკი მხოლოდ <code>.dark-mode</code> კლასს ამატებს body-ზე.
+        <strong>შენი SCSS</strong> პასუხისმგებელია ყველაფრის შეცვლაზე.
+      </p>
+
+      <button class="theme btn btn--primary" id="darkModeToggle">
+        <i class="fa-solid fa-moon"></i> Dark Mode ჩართვა
+      </button>
+
+      <div class="bonus-hint">
+        <p><i class="fa-solid fa-light-emergency"></i> <strong>მინიშნება:</strong> SCSS-ში გამოიყენე:</p>
+        <pre><code>body.dark-mode {
+  $bg-color:   #111111;
+  $text-color: #f0f0f0;
+  // ან CSS custom properties-ით:
+  --bg:   #111111;
+  --text: #f0f0f0;
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="site-footer__text">
+      Modern UI Component Library &mdash; SCSS დავალება &copy; 2026
+    </p>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const isDark = document.body.classList.contains('dark-mode');
+      toggleBtn.innerHTML = isDark ? `<i class="fa-solid fa-sun"></i> Light Mode ჩართვა` : `<i class="fa-solid fa-moon"></i> Dark Mode ჩართვა`;
+    });
+  </script>
+
+</body>
+
+</html>
