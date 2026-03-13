@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <div class="search-box">
+                    <input type="text" placeholder="ძებნა...">
+                </div>
+            </header>
+            <div class="contact-list">
+                <div class="contact active">
+                    <div class="avatar">
+                        AI
+                    </div>
+                    <div class="contact-info">
+                        <h4>Gemini Assistant</h4>
+                        <p>ონლაინშია</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="avatar">TS</div>
+                    <div class="contact-info">
+                        <h4>Support team</h4>
+                        <p>ხაზზე არაა</p>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+        <main class="chat-window">
+            <header class="chat-nav">
+                <div class="current-chat">
+                    <h3>Gemini assistant</h3>
+                    <small>აქტიურია ახლა</small>
+                </div>
+                <div class="nav-icons">
+                    <span>-</span>-<span>-</span>-<span>-</span>
+                </div>
+            </header>
+            <section class="messages">
+                <div class="msg bot">
+                    <div class="bubble">
+                        გამარჯობა! მე შემიძლია დაგეხმაროთ SCSS-ის და HTML-ის სტრუქტურირებაში.
+                    </div>
+                </div>
+                <div class="msg user">
+                    <div class="bubble">
+                        მჭირდება კომპლექსური დიზაინი Javascript-ის გარეშე
+                    </div>
+                </div>
+                <div class="msg bot">
+                    <div class="bubble code">
+                        <code>
+                            .chat {display-flex;}
+                        </code>
+                    </div>
+                </div>
+            </section>
+            <footer class="input bar">
+                <div class="input-group">
+                    <button class="attach-btn">+</button>
+                    <input type="text" placeholder="დაწერე შეტყობინება...">
+                    <button class="send-btn">></button>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+
+</html>

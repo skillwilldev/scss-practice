@@ -1,0 +1,181 @@
+@import 'variables';
+@import 'mixin';
+
+.app-wrapper {
+    width: $chat-max-width;
+    height: $chat-height;
+    background-color: $color-bg-chat;
+    display: flex;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    box-shadow: $shadow-base;
+}
+
+// გვერდითა პანელი
+.chat-sidebar {
+    width: $sidebar-width;
+    background-color: $color-sidebar;
+    border-right: 1px solid $color-primary;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        padding: 15px 20px;
+
+        h4 {
+            font-size: 1.2rem;
+            margin: 0;
+
+        }
+
+        .search-area {
+            padding: 10px 20px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            background: #f0f2f5;
+            outline: none;
+
+        }
+    }
+
+    .contact-list {
+        flex: 1;
+        align-items: center;
+        padding: 12px 20px;
+        cursor: pointer;
+        transition: $transition-base;
+
+        &:hover {
+            background: #f2f2f2;
+        }
+
+        &:active {
+            background: #e7f3ff;
+        }
+
+        .avatar {
+            width: 480px;
+            height: 48px;
+            border-radius: 50%;
+            background: $color-bot-bubble;
+            color: $color-text-main;
+            @include flex-center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .container-details {
+            h4 {
+                margin: 0;
+                font-size: 0.95rem;
+
+                p {
+                    margin: 0;
+                    font-size: 0.8rem;
+                    color: $color-text-sub;
+                }
+            }
+        }
+    }
+
+    //ჩატის მთავარი ფანჯარა
+    .chat-window {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        nav {
+            padding: 10px 20px;
+            border-bottom: 1px solid $color-bg-app;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .chat-info {
+                h2 {
+                    margin: 0;
+                    font-size: 1.1rem;
+                }
+
+                .small {
+                    color: #3ecc71;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .messages-container {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            @include flex-center;
+
+            .msg {
+                display: flex;
+                width: 100%;
+
+                &.bot {
+                    justify-content: flex-start;
+
+                    .bubble {
+                        @include flex-center;
+                    }
+                }
+
+                .msg {
+                    display: flex;
+                    width: 100%;
+
+                    &.user {
+                        justify-content: flex-start;
+
+                        .bubble {
+                            @include flex-center;
+                        }
+                    }
+                }
+            }
+
+            footer {
+                padding: 15px 30px;
+                border-top: 1px solid black;
+
+                .input-bar {
+                    display: flex;
+                    gap: 15px;
+                    background: $color-bg-app;
+                    padding: 5px 15px;
+                    border-radius: 25px;
+                    align-items: center;
+
+                    input {
+                        flex: 1;
+                        background: transparent;
+                        border: none;
+                        padding: 12px;
+                        outline: none;
+                        font-size: 14px;
+                    }
+
+                    .send-btn {
+                        background: transparent;
+                        border: none;
+                        cursor: pointer;
+                        color: $primary-color;
+                        font-size: 1.2rem;
+                        transition: $transition-base;
+
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
