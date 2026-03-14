@@ -1,73 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Chat App</title>
 </head>
 
 <body>
-    <div class="app-container">
-        <aside class="sidebar">
-            <header class="sidebar-header">
-                <div class="search-box">
-                    <input type="text" placeholder="ძებნა...">
-                </div>
+    <div class="app-wrapper">
+        <aside class="chat-sidebar">
+            <header>
+                <h4>Messenger</h4>
+                <input type="text" class="search-area" placeholder="ძებნა...">
             </header>
             <div class="contact-list">
-                <div class="contact active">
-                    <div class="avatar">
-                        AI
-                    </div>
-                    <div class="contact-info">
+                <div class="contact-item active">
+                    <div class="avatar">AI</div>
+                    <div class="container-details">
                         <h4>Gemini Assistant</h4>
-                        <p>ონლაინშია</p>
+                        <p>ონლაინ<span class="status--online"></span></p>
                     </div>
                 </div>
-                <div class="contact">
+                <div class="contact-item">
                     <div class="avatar">TS</div>
-                    <div class="contact-info">
-                        <h4>Support team</h4>
-                        <p>ხაზზე არაა</p>
+                    <div class="container-details">
+                        <h4>Support Team</h4>
+                        <p>ხაზზე არაა <span class="status--offline"></span></p>
                     </div>
                 </div>
-
             </div>
         </aside>
+
         <main class="chat-window">
-            <header class="chat-nav">
-                <div class="current-chat">
-                    <h3>Gemini assistant</h3>
-                    <small>აქტიურია ახლა</small>
+            <nav>
+                <div class="chat-info">
+                    <h2>Gemini Assistant</h2>
+                    <span class="small">აქტიურია ახლა</span>
                 </div>
                 <div class="nav-icons">
-                    <span>-</span>-<span>-</span>-<span>-</span>
+                    <button>•••</button>
                 </div>
-            </header>
-            <section class="messages">
+            </nav>
+
+            <section class="messages-container">
                 <div class="msg bot">
-                    <div class="bubble">
-                        გამარჯობა! მე შემიძლია დაგეხმაროთ SCSS-ის და HTML-ის სტრუქტურირებაში.
-                    </div>
+                    <div class="bubble">გამარჯობა! მე შემიძლია დაგეხმაროთ SCSS-ის და HTML-ის სტრუქტურირებაში.</div>
                 </div>
                 <div class="msg user">
-                    <div class="bubble">
-                        მჭირდება კომპლექსური დიზაინი Javascript-ის გარეშე
-                    </div>
-                </div>
-                <div class="msg bot">
-                    <div class="bubble code">
-                        <code>
-                            .chat {display-flex;}
-                        </code>
-                    </div>
+                    <div class="bubble">მჭირდება კომპლექსური დიზაინი Javascript-ის გარეშე</div>
                 </div>
             </section>
-            <footer class="input bar">
-                <div class="input-group">
-                    <button class="attach-btn">+</button>
+
+            <footer>
+                <div class="input-bar">
+                    <!-- <button class="attach-btn">+</button> -->
                     <input type="text" placeholder="დაწერე შეტყობინება...">
                     <button class="send-btn">></button>
                 </div>
