@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="loader-container">
+        <div class="loader">
+            <span>იტვირთება...</span>
+        </div>
+        <div class="wave-container">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </div>
+    <svg style="width:0; height:0; position:absolute;" aria-hidden="true" focusable="false">
+        <defs>
+            <clipPath id="wave1" clipPathUnits="objectBoundingBox">
+                <path d="M0,0 L1,0 L1,0.8 C0.8,0.9 0.5,0.7 0.3,0.9 C0.1,1 0,0.8 0,0.8 Z"></path>
+            </clipPath>
+
+            <clipPath id="wave2" clipPathUnits="objectBoundingBox">
+                <path d="M0,0 L1,0 L1,0.7 C0.7,1 0.4,0.6 0,0.9 Z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+</body>
+
+</html>
