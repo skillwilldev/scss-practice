@@ -1,0 +1,88 @@
+@use './variables' as *;
+@use 'mixin' as *;
+@use "sass:color";
+
+body {
+    background-color: $bg-dark;
+    color: $text-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.skills-container {
+    width: 400px;
+    @include flex-column;
+
+    .skill-block {
+        position: relative;
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-decoration: underline;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: $bar-height;
+            background: rgba($color: #000000, $alpha: 1.0);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow .3s ease-in-out;
+
+            &:hover {
+                box-shadow: rgba(255, 255, 255, 0.37) 0px 0px 29px 0px;
+            }
+
+            .fill {
+                height: 100%;
+                width: 0; // საწყისო ზომაა
+                border-radius: 10px;
+                animation: fillUp 1.5s ease-out forwards;
+            }
+        }
+
+        // For Loop
+        //ციკლი აგენერირებს 5 სხვადასხვა სტილში
+        @for $i from 1 through 5 {
+            $current-width: 50% + ($i * 10%);
+
+            &:nth-child(#{$i}) {
+                position: relative;
+                cursor: pointer;
+
+                .fill {
+                    //ფერი ყოველ ჯერზე იცვლება (Hue-rotate-ით an Adjust-color-ით)
+                    background: color.adjust($base-color, $hue: $i * 40deg);
+                    animation-delay: $i * 0.2s;
+                    width: $current-width;
+                }
+
+                &:hover::after {
+                    content: "#{$current-width}";
+                    position: absolute;
+                    top: 81%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 10px;
+                    color: white;
+                }
+
+
+            }
+        }
+    }
+}
+
+//ანიმაცია
+@keyframes fillUp {
+    from {
+        width: 0;
+    }
+
+    to {}
+}
