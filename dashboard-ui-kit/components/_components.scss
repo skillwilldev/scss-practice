@@ -1,0 +1,149 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+
+  &__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.25rem;
+  }
+
+  &__value {
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  &__meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: #{v.$font};
+  border-radius: 7px;
+  border: 1.5px solid transparent;
+  transition: opacity 0.15s;
+  cursor: pointer;
+
+  &--primary {
+    background: var(--color-primary);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    border-color: var(--border);
+    color: var(--text);
+
+    &:hover {
+      background: var(--bg);
+    }
+  }
+
+  &--sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+.sidebar {
+  width: 210px;
+  min-height: 100vh;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 1.25rem 0.75rem;
+  display: none;
+
+  &__logo {
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__item {
+    padding: 0.55rem 0.75rem;
+    border-radius: 7px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+
+    &:hover {
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    &.active {
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding-left: 0.5rem;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.input {
+  padding: 0.55rem 0.75rem;
+  font-family: #{v.$font};
+  font-size: 0.82rem;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: 7px;
+  color: var(--text);
+  width: 100%;
+  transition: border-color 0.15s;
+
+  &::placeholder {
+    color: var(--muted);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+}

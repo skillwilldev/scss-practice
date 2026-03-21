@@ -1,0 +1,128 @@
+@use './abstracts/variables' as v;
+@use './abstracts/mixins' as m;
+@use './base/base';
+@use './components/components';
+
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+
+  @include m.bp('md') {
+    display: block;
+  }
+}
+
+.dashboard__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.topbar {
+  @include m.flex(space-between, center);
+  height: 56px;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  &__actions {
+    @include m.flex(flex-end, center, 0.75rem);
+  }
+}
+
+.content {
+  padding: 1.75rem 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+
+.page-header {
+  @include m.flex(space-between, center);
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  @include m.bp('lg') {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @include m.bp('lg') {
+    grid-template-columns: 1fr 280px;
+  }
+}
+
+.chart-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+
+  &__header {
+    @include m.flex(space-between, center);
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+
+  &__body {
+    height: 180px;
+    border-radius: 7px;
+    border: 1.5px dashed var(--border);
+    @include m.flex(center, center);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  border: 1.5px solid var(--border);
+  @include m.flex(center, center);
+  color: var(--muted);
+  transition: border-color 0.15s, color 0.15s;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+
+  &:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
