@@ -1,0 +1,61 @@
+@use "sass:color";
+@use 'variables' as *;
+@use 'mixin' as *;
+
+
+body {
+    background-color: $bg-color;
+    height: 100vh;
+    margin: 0;
+    @include flex-center;
+}
+
+.card {
+    background-color: $card-bg;
+    width: 300px;
+    padding: 20px;
+    border-radius: $border-radius;
+    box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 1.0);
+    text-align: center;
+
+    &__image {
+        width: 100%;
+        height: 150px;
+        background-color: $primary-color;
+        border-radius: $border-radius;
+        margin-bottom: 15px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        color: $text-dark;
+        margin: 10px 0;
+    }
+
+    &__description {
+        font-size: 0.9rem;
+        color: color.adjust($text-dark, $lightness: 20%);
+        // color: lighten($text-dark, 20%);
+        line-height: 1.4;
+    }
+}
+
+// ღილაკის სტილი Hover ეფექტი
+
+.btn-action {
+    margin-top: 20px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: $primary-color;
+    color: white;
+    cursor: pointer;
+    transition: transform color.adjust($primary-color, $lightness: -10%);
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: color.adjust($primary-color, $lightness: -10%);
+    }
+
+}
