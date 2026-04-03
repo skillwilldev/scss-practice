@@ -1,0 +1,35 @@
+ @use './abstracts/functions' as *;
+
+ body {
+     background-color: get-token("colors", "page-bg");
+     font-family: sans-serif;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin: 0;
+ }
+
+ .container {
+     display: flex;
+     gap: 20px;
+ }
+
+ .card {
+     background-color: get-token("colors", "card-bg");
+     border-radius: get-token("layout", "radius");
+     padding: get-token("layout", "padding");
+     width: 200px;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+     border-top: 5px solid get-token("colors", "primary");
+
+     &__title {
+         color: get-token("colors", "primary");
+         margin-top: 0;
+     }
+
+     &__text {
+         color: get-token("colors", "text");
+     }
+ }
