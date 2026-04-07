@@ -1,0 +1,30 @@
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 1024px,
+  "xl": 1280px,
+);
+
+// Container max-widths map
+$container-max-widths: (
+  "sm": 540px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1140px,
+);
+
+// Color palette map
+$colors: (
+  "primary": #2563eb,
+  "secondary": #64748b,
+  "accent": #10b981,
+  "danger": #ef4444,
+  "warning": #f59e0b,
+);
+
+
+// Typography
+$font: "'Montserrat', sans-serif";
+
+// Spacing base unit (4px)
+$unit: 0.25rem;

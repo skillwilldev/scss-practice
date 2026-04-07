@@ -1,0 +1,20 @@
+@use "sass:color";
+@use '../abstracts/' as *;
+
+.card__button {
+    @include flex-center;
+    width: 100%;
+    background-color: $primary-color;
+    color: $white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: $transition;
+    cursor: pointer;
+
+    &:hover {
+        // background-color: darken($primary-color, 8%);
+        background-color: color.adjust($primary-color, $lightness: -8%);
+    }
+}

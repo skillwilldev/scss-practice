@@ -1,0 +1,136 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+:root {
+  @include m.theme(light);
+
+  @each $name, $val in v.$colors {
+    --color-#{$name}: #{$val};
+  }
+}
+
+[data-theme="dark"] {
+  @include m.theme(dark);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: #{v.$font};
+  font-size: 0.9rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: #{v.$font};
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.375rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+// @for — spacing utilities: mt-1..mt-5, mb-1..mb-5, p-1..p-5
+@for $i from 1 through 5 {
+  $size: v.$unit * 4 * $i; // 1rem, 2rem, 3rem, 4rem, 5rem
+
+  .mt-#{$i} {
+    margin-top: $size !important;
+  }
+
+  .mb-#{$i} {
+    margin-bottom: $size !important;
+  }
+
+  .p-#{$i} {
+    padding: $size !important;
+  }
+}
+
+.mt {
+  color: #fff;
+  padding: .25rem .6rem;
+  border-radius: 5px;
+  font-size: .72rem;
+  font-weight: 700
+}
+
+// @each — color utilities from $colors map
+@each $name, $val in v.$colors {
+  .text-#{$name} {
+    color: $val !important;
+  }
+
+  .bg-#{$name} {
+    background-color: $val !important;
+  }
+}
+
+// Tiny helpers
+.text-muted {
+  color: var(--muted);
+}
+
+.text-sm {
+  font-size: 0.8rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}

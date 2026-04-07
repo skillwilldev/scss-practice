@@ -1,0 +1,49 @@
+@use "sass:map";
+@use 'variables' as v;
+
+
+@mixin bp($key) {
+  @media (min-width: map.get(v.$breakpoints, $key)) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+
+  @each $key, $w in v.$container-max-widths {
+    @include bp($key) {
+      max-width: $w;
+    }
+  }
+}
+
+@mixin theme($mode) {
+  @if $mode ==light {
+    --bg: #f8fafc;
+    --surface: #fff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+  }
+
+  @if $mode ==dark {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --border: #334155;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+  }
+}
+
+@mixin flex($j: flex-start, $a: center, $g: 0) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+
+  @if $g !=0 {
+    gap: $g;
+  }
+}

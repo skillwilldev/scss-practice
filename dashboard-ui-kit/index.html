@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard UI Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="sidebar__logo">Dashify</div>
+
+      <div class="sidebar__item active">Overview</div>
+      <div class="sidebar__item">Analytics</div>
+      <div class="sidebar__item">Products</div>
+      <div class="sidebar__item">Customers</div>
+      <div class="sidebar__item">Settings</div>
+
+      <div class="sidebar__footer">Melik P.</div>
+    </aside>
+
+
+    <div class="dashboard__main">
+
+
+      <header class="topbar">
+        <span class="topbar__title">Overview</span>
+        <div class="topbar__actions">
+          <button class="theme-toggle" id="themeToggle">🌙</button>
+          <button class="btn btn--ghost btn--sm">Export</button>
+          <button class="btn btn--primary btn--sm">+ New</button>
+        </div>
+      </header>
+
+      <main class="content">
+
+        <div class="page-header">
+          <div>
+            <h2>Good morning 👋</h2>
+            <p>Here's what's happening today.</p>
+          </div>
+          <button class="btn btn--ghost btn--sm">Last 30 days ▾</button>
+        </div>
+
+        <div class="stats-grid">
+          <div class="card">
+            <div class="card__label">Revenue</div>
+            <div class="card__value">$84,290</div>
+            <div class="card__meta text-accent">↑ 12.5%</div>
+          </div>
+          <div class="card">
+            <div class="card__label">Users</div>
+            <div class="card__value">3,842</div>
+            <div class="card__meta text-accent">↑ 8.1%</div>
+          </div>
+          <div class="card">
+            <div class="card__label">Orders</div>
+            <div class="card__value">1,204</div>
+            <div class="card__meta text-danger">↓ 2.3%</div>
+          </div>
+          <div class="card">
+            <div class="card__label">Conversion</div>
+            <div class="card__value">4.7%</div>
+            <div class="card__meta text-muted">→ Stable</div>
+          </div>
+        </div>
+
+        <div class="main-grid">
+
+          <div class="chart-box">
+            <div class="chart-box__header">
+              Revenue Overview
+              <button class="btn btn--ghost btn--sm">Monthly ▾</button>
+            </div>
+            <div class="chart-box__body">Chart renders here</div>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-1">Quick Add</h3>
+            <div class="input-group mb-1">
+              <label class="label">Full Name</label>
+              <input class="input" type="text" placeholder="e.g. Ana Nikolaishvili">
+            </div>
+            <div class="input-group mb-1">
+              <label class="label">Email</label>
+              <input class="input" type="email" placeholder="you@example.com">
+            </div>
+            <button class="btn btn--primary w-full">Add Customer</button>
+          </div>
+
+        </div>
+
+        <div class="card mt-2">
+          <h3 class="mb-1">@for loop — Spacing Utilities</h3>
+          <div class="flex items-center gap-1">
+            <span class="text-sm text-muted">mt-1 through mt-5 →</span>
+            <div class="mt mt-1"
+              style="background:var(--color-primary);">
+              mt-1</div>
+            <div class="mt mt-2"
+              style="background:var(--color-accent);">
+              mt-2</div>
+            <div class="mt mt-3"
+              style="background:var(--color-warning);">
+              mt-3</div>
+            <div class="mt mt-4"
+              style="background:var(--color-secondary);">
+              mt-4</div>
+            <div class="mt mt-5"
+              style="background:var(--color-danger);">
+              mt-5</div>
+          </div>
+        </div>
+
+        <div class="card mt-1">
+          <h3 class="mb-1">@each loop — Color Utilities</h3>
+          <div class="flex items-center gap-1">
+            <span class="text-primary font-bold">text-primary</span>
+            <span class="text-accent font-bold">text-accent</span>
+            <span class="text-danger font-bold">text-danger</span>
+            <span class="text-warning font-bold">text-warning</span>
+            <span class="text-secondary font-bold">text-secondary</span>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme === 'dark';
+      document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+      btn.textContent = dark ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+
+</html>

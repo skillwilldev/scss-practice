@@ -1,0 +1,29 @@
+@use './scss/abstracts/' as *;
+@use './scss/components/' as *;
+
+body {
+    background-color: $bg-color;
+    font-family: 'Noto Sans Georgian', sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+
+    .section-title {
+        font-size: 2.5rem;
+        color: $text-dark;
+        margin-bottom: 48px;
+        font-weight: 700;
+    }
+
+    .tour-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}

@@ -1,0 +1,10 @@
+@use './tokens' as t;
+@use "sass:map";
+
+@function get-token($group, $key) {
+    @if not map.has-key(t.$tokens, $group) {
+        @error "Token group '#{$group}' does not exist in $tokens map. Check your _tokens.scss file";
+    }
+    
+    @return map.get(map.get(t.$tokens, $group), $key);
+}
