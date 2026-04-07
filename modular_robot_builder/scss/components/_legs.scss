@@ -1,0 +1,13 @@
+@use 'sass:math';
+@use '../abstracts/variables' as *;
+
+.legs-container {
+    display: flex;
+}
+
+.leg {
+    width: $unit * 2;
+    height: $unit * 4;
+    background-color: #2d3748;
+    margin: 0 math.div($unit, 2);
+}

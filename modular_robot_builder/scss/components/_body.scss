@@ -1,0 +1,29 @@
+@use 'sass:math';
+@use '../abstracts/variables' as *;
+
+.body {
+    width: $unit * 8;
+    height: $unit * 10;
+    background-color: $color-iron;
+    border-radius: $body-shape;
+    margin-top: math.div($unit, 4);
+    position: relative;
+    border: 2px solid #2d3748;
+}
+
+.arm {
+    width: $unit * 1.5;
+    height: $unit * 6;
+    background-color: #718096;
+    position: absolute;
+    top: $unit * 1;
+    border-radius: math.div($unit, 2);
+
+    &.left {
+        left: $unit * -2;
+    }
+
+    &.right {
+        right: $unit * -2;
+    }
+}

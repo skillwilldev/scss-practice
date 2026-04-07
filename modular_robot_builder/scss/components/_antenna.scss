@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use '../abstracts/variables' as *;
+
+.antenna {
+    width: math.div($unit, 4);
+    height: $antenna-height;
+    background-color: $color-gold;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: $unit * -0.5;
+        left: 50%;
+        transform: translateX(-50%);
+        width: math.div($unit, 2);
+        height: math.div($unit, 2);
+        background-color: $eye-color;
+        border-radius: 50%;
+    }
+}

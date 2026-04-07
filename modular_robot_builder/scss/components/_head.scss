@@ -1,0 +1,21 @@
+@use 'sass:math';
+@use '../abstracts/variables' as *;
+
+.head {
+    width: $unit * 4;
+    height: $unit * 4;
+    background-color: $color-iron;
+     border-radius: math.div($unit, 2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: math.div($unit, 2);
+    border: 2px solid #2d3748;
+
+    .eye {
+        width: $unit * 0.8;
+        height: $unit * 0.8;
+        background-color: $eye-color;
+        border-radius: 50%;
+    }
+}

@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as *;
+
+.shield {
+    @if $has-shield {
+        display: block;
+    }
+
+    @else {
+        display: none;
+    }
+
+    width: $unit * 4;
+    height: $unit * 5;
+    background-color: $color-shield;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: absolute;
+    left: $unit * -3;
+    top: $unit * 1;
+}
+
+.tool {
+    @if $has-tool {
+        display: block;
+    }
+
+    @else {
+        display: none;
+    }
+
+    width: $unit * 1;
+    height: $unit * 4;
+    background-color: $color-gold;
+    position: absolute;
+    bottom: $unit * -2;
+    right: $unit * -0.5;
+}

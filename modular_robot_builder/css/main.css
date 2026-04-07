@@ -1,0 +1,110 @@
+body {
+  background-color: #1a202c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.robot-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.antenna {
+  width: 5px;
+  height: 40px;
+  background-color: #ecc94b;
+  position: relative;
+}
+.antenna::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #39ff14;
+  border-radius: 50%;
+}
+
+.head {
+  width: 80px;
+  height: 80px;
+  background-color: #4a5568;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #2d3748;
+}
+.head .eye {
+  width: 16px;
+  height: 16px;
+  background-color: #39ff14;
+  border-radius: 50%;
+}
+
+.body {
+  width: 160px;
+  height: 200px;
+  background-color: #4a5568;
+  border-radius: 30px;
+  margin-top: 5px;
+  position: relative;
+  border: 2px solid #2d3748;
+}
+
+.arm {
+  width: 30px;
+  height: 120px;
+  background-color: #718096;
+  position: absolute;
+  top: 20px;
+  border-radius: 10px;
+}
+.arm.left {
+  left: -40px;
+}
+.arm.right {
+  right: -40px;
+}
+
+.shield {
+  display: block;
+  width: 80px;
+  height: 100px;
+  background-color: #4299e1;
+  border: 2px solid white;
+  border-radius: 5px;
+  position: absolute;
+  left: -60px;
+  top: 20px;
+}
+
+.tool {
+  display: block;
+  width: 20px;
+  height: 80px;
+  background-color: #ecc94b;
+  position: absolute;
+  bottom: -40px;
+  right: -10px;
+}
+
+.legs-container {
+  display: flex;
+}
+
+.leg {
+  width: 40px;
+  height: 80px;
+  background-color: #2d3748;
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
