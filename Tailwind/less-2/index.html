@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>თანამედროვე ბლოგის პოსტი</title>
+    <!-- Tailwind CSS with Typography, Forms, and Aspect Ratio plugins -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        /* Custom scrollbar logic using standard CSS as fallback/augmentation for tailwind-scrollbar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #3b82f6;
+            border-radius: 20px;
+        }
+
+        /* Animation class logic */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900 font-sans selection:bg-blue-100">
+
+    <!-- 1. ნავიგაცია (Sticky Navbar) -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span
+                        class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                        TechBlog
+                    </span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">მთავარი</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">სტატიები</a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors font-medium">ჩვენს
+                            შესახებ</a>
+                        <button
+                            class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-all shadow-sm">გამოწერა</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout Container -->
+    <main class="max-w-4xl mx-auto px-4 py-8 lg:py-12 flex flex-col lg:flex-row gap-12">
+
+        <!-- Content Area -->
+        <div class="flex-1">
+            <!-- 3. სურათის ეფექტი (Aspect Ratio & Animation) -->
+            <div class="aspect-video w-full overflow-hidden rounded-2xl shadow-lg mb-10 animate-fade-in">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200"
+                    alt="ტექნოლოგიური სურათი"
+                    class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                    onerror="this.src='https://via.placeholder.com/1200x675?text=Blog+Image'">
+            </div>
+
+            <!-- 2. მთავარი სტატია (Typography Plugin) -->
+            <article class="prose prose-blue lg:prose-xl max-w-none">
+                <h1 class="font-extrabold tracking-tight">როგორ შევქმნათ თანამედროვე ვებ-გვერდები Tailwind CSS-ის
+                    გამოყენებით</h1>
+
+                <p>
+                    თანამედროვე ვებ-დეველოპმენტი წარმოუდგენელია მოქნილი და სწრაფი ინსტრუმენტების გარეშე. Tailwind CSS
+                    არის "utility-first" ფრეიმვორკი, რომელიც საშუალებას გვაძლევს ავაწყოთ უნიკალური დიზაინი HTML-დან
+                    გაუსვლელად.
+                </p>
+
+                <blockquote>
+                    "კოდის წერა არის ხელოვნება, ხოლო Tailwind CSS არის ის ფუნჯი, რომელიც ამ ხელოვნებას უფრო ფერადს და
+                    ეფექტურს ხდის."
+                </blockquote>
+
+                <h3>რატომ ავირჩიოთ ეს მიდგომა?</h3>
+                <p>
+                    ბევრი დეველოპერი უპირატესობას ანიჭებს Tailwind-ს მისი პროდუქტიულობის გამო. ქვემოთ მოცემულია ძირითადი
+                    მიზეზები:
+                </p>
+
+                <ol>
+                    <li>სწრაფი პროტოტიპირება და რეალური პროდუქტის შექმნა.</li>
+                    <li>არანაირი ზედმეტი CSS ფაილები.</li>
+                    <li>მარტივი ადაპტაცია მობილური მოწყობილობებისთვის.</li>
+                    <li>უზარმაზარი ეკოსისტემა და პლაგინები.</li>
+                </ol>
+
+                <p>
+                    საბოლოო ჯამში, მნიშვნელოვანია გვესმოდეს, რომ ტექნოლოგიები იცვლება, მაგრამ სუფთა და მომხმარებელზე
+                    ორიენტირებული დიზაინის პრინციპები რჩება უცვლელი.
+                </p>
+            </article>
+
+            <hr class="my-12 border-gray-200">
+
+            <!-- 4. კომენტარების სექცია (Forms Plugin) -->
+            <section class="mt-10">
+                <h3 class="text-2xl font-bold mb-6">დატოვე კომენტარი</h3>
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-gray-700">სახელი</label>
+                            <input type="text" name="name" id="name"
+                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                placeholder="გიორგი">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700">ელ-ფოსტა</label>
+                            <input type="email" name="email" id="email"
+                                class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-all"
+                                placeholder="email@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="comment" class="block text-sm font-semibold text-gray-700">თქვენი აზრი</label>
+                        <textarea id="comment" name="comment" rows="4"
+                            class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 transition-all"
+                            placeholder="დაწერეთ რას ფიქრობთ..."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit"
+                            class="inline-flex justify-center rounded-lg border border-transparent bg-blue-600 py-3 px-8 text-sm font-bold text-white shadow-md hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200">
+                            გაგზავნა
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+        <!-- 5. გვერდითა პანელი (Scrollbar Plugin) -->
+        <aside class="w-full lg:w-72 shrink-0">
+            <div class="sticky top-24">
+                <h4 class="text-lg font-bold mb-4 px-1">მსგავსი სტატიები</h4>
+                <div
+                    class="h-96 overflow-y-auto pr-4 custom-scrollbar scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-transparent">
+                    <div class="space-y-6">
+                        <!-- Related Post Items -->
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video mb-2 rounded-lg overflow-hidden bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=300"
+                                    class="object-cover w-full h-full group-hover:opacity-80 transition-opacity">
+                            </div>
+                            <h5 class="text-sm font-bold leading-tight group-hover:text-blue-600 transition-colors">
+                                Javascript-ის საფუძვლები დამწყებთათვის</h5>
+                            <p class="text-xs text-gray-500 mt-1">12 აპრილი, 2024</p>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video mb-2 rounded-lg overflow-hidden bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300"
+                                    class="object-cover w-full h-full group-hover:opacity-80 transition-opacity">
+                            </div>
+                            <h5 class="text-sm font-bold leading-tight group-hover:text-blue-600 transition-colors">
+                                React-ის ახალი Hook-ები</h5>
+                            <p class="text-xs text-gray-500 mt-1">10 აპრილი, 2024</p>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video mb-2 rounded-lg overflow-hidden bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=300"
+                                    class="object-cover w-full h-full group-hover:opacity-80 transition-opacity">
+                            </div>
+                            <h5 class="text-sm font-bold leading-tight group-hover:text-blue-600 transition-colors">
+                                მონაცემთა ბაზების ოპტიმიზაცია</h5>
+                            <p class="text-xs text-gray-500 mt-1">8 აპრილი, 2024</p>
+                        </div>
+
+                        <div class="group cursor-pointer">
+                            <div class="aspect-video mb-2 rounded-lg overflow-hidden bg-gray-200">
+                                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=300"
+                                    class="object-cover w-full h-full group-hover:opacity-80 transition-opacity">
+                            </div>
+                            <h5 class="text-sm font-bold leading-tight group-hover:text-blue-600 transition-colors">
+                                როგორ გავხდეთ Full-stack დეველოპერი</h5>
+                            <p class="text-xs text-gray-500 mt-1">5 აპრილი, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tag cloud as extra aside content -->
+                <div class="mt-8">
+                    <h4 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-4 px-1">თეგები</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="bg-gray-200 px-3 py-1 rounded text-xs font-medium hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors">Web</span>
+                        <span
+                            class="bg-gray-200 px-3 py-1 rounded text-xs font-medium hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors">Design</span>
+                        <span
+                            class="bg-gray-200 px-3 py-1 rounded text-xs font-medium hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors">Tailwind</span>
+                        <span
+                            class="bg-gray-200 px-3 py-1 rounded text-xs font-medium hover:bg-blue-100 hover:text-blue-600 cursor-pointer transition-colors">Code</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-20 py-10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-gray-500 text-sm">© 2024 TechBlog - ყველა უფლება დაცულია.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
