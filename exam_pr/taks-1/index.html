@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landwind — Building digital products & brands. Start your free trial today.">
+  <title>SCSS Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <div class="header__left">
+        <a href="#" class="header__logo">
+          <img src="img/Logo.svg" alt="Landwind Logo">
+        </a>
+        <nav class="header__nav" id="main-nav">
+          <a href="#" class="header__nav-link">Company</a>
+          <a href="#" class="header__nav-link">Marketplace</a>
+          <a href="#" class="header__nav-link">Features</a>
+          <a href="#" class="header__nav-link">Team</a>
+          <a href="#" class="header__nav-link">Contact</a>
+        </nav>
+      </div>
+      <div class="header__actions">
+        <a href="#" class="header__login">Log in</a>
+        <a href="#" class="header__cta">Get started</a>
+      </div>
+      <button class="header__burger" id="burger-menu" aria-label="Toggle navigation">
+        <img src="img/burger.svg" alt="Menu">
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <h1 class="hero__title">Building digital products &amp; brands.</h1>
+        <p class="hero__description">
+          Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and
+          drive economic growth.
+        </p>
+        <div class="hero__buttons">
+          <a href="#" class="hero__btn hero__btn--primary">Start 30 day free trial</a>
+          <a href="#pricing" class="hero__btn hero__btn--outlined">Pricing &amp; FAQ</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <img src="img/marketing-strategy 1.png" alt="3D Illustration of digital marketing strategy">
+      </div>
+    </div>
+  </section>
+
+  <section class="logos" id="logos">
+    <div class="container logos__inner">
+      <div class="logos__item">
+        <img src="img/Google.svg" alt="Google">
+      </div>
+      <div class="logos__item">
+        <img src="img/Microsoft.svg" alt="Microsoft">
+      </div>
+      <div class="logos__item">
+        <img src="img/Spotify.svg" alt="Spotify">
+      </div>
+      <div class="logos__item">
+        <img src="img/Mailchimp.svg" alt="Mailchimp">
+      </div>
+      <div class="logos__item">
+        <img src="img/Airbnb.svg" alt="Airbnb">
+      </div>
+      <div class="logos__item">
+        <img src="img/uber.svg" alt="Uber">
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing__header">
+        <h2 class="pricing__title">Pay as you grow</h2>
+        <p class="pricing__subtitle">
+          Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and
+          drive economic growth.
+        </p>
+      </div>
+
+      <div class="pricing__grid">
+        <div class="card" id="card-starter">
+          <h3 class="card__plan">Starter</h3>
+          <p class="card__description">Great for personal use and for your side projects.</p>
+          <div class="card__price">
+            <span class="card__amount">$49</span>
+            <span class="card__period">/month</span>
+          </div>
+          <ul class="card__features">
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Individual configuration</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>No setup, monthly, or hidden fees</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Team size: <strong>1 developer</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Premium support: <strong>6 months</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Free updates: <strong>6 months</strong></span>
+            </li>
+          </ul>
+          <a href="#" class="card__btn">Get started</a>
+        </div>
+
+        <div class="card" id="card-company">
+          <h3 class="card__plan">Company</h3>
+          <p class="card__description">Best for large scale uses and extended redistribution rights.</p>
+          <div class="card__price">
+            <span class="card__amount">$99</span>
+            <span class="card__period">/month</span>
+          </div>
+          <ul class="card__features">
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Individual configuration</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>No setup, monthly, or hidden fees</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Team size: <strong>10 developers</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Premium support: <strong>24 months</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Free updates: <strong>24 months</strong></span>
+            </li>
+          </ul>
+          <a href="#" class="card__btn">Get started</a>
+        </div>
+
+        <div class="card" id="card-enterprise">
+          <h3 class="card__plan">Enterprise</h3>
+          <p class="card__description">Best for large scale uses and extended redistribution rights.</p>
+          <div class="card__price">
+            <span class="card__amount">$499</span>
+            <span class="card__period">/month</span>
+          </div>
+          <ul class="card__features">
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Individual configuration</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>No setup, monthly, or hidden fees</span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Team size: <strong>100+ developers</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Premium support: <strong>36 months</strong></span>
+            </li>
+            <li class="card__feature">
+              <img src="img/check.svg" alt="" class="card__feature-icon">
+              <span>Free updates: <strong>36 months</strong></span>
+            </li>
+          </ul>
+          <a href="#" class="card__btn">Get started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <a href="#" class="footer__logo">
+        <img src="img/Logo.svg" alt="Landwind Logo">
+      </a>
+      <p class="footer__copyright">&copy; 2026 Flowbite, Inc. All rights reserved.</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link" aria-label="GitHub">
+          <img src="img/github.svg" alt="GitHub">
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Twitter">
+          <img src="img/twitter.svg" alt="Twitter">
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Dribbble">
+          <img src="img/dribbble.svg" alt="Dribbble">
+        </a>
+        <a href="#" class="footer__social-link" aria-label="Facebook">
+          <img src="img/facebook-f.svg" alt="Facebook">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

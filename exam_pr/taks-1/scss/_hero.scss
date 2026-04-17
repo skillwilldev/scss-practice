@@ -1,0 +1,111 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+  padding: 80px 0 60px;
+
+  &__inner {
+    @include flex(row, space-between, center, 40px);
+
+    @include respond-below($breakpoint-md) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 580px;
+
+    @include respond-below($breakpoint-md) {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 60px;
+    font-weight: $font-weight-extrabold;
+    line-height: 60px;
+    color: $color-heading;
+    margin-bottom: 24px;
+
+    @include respond-below($breakpoint-lg) {
+      font-size: 40px;
+    }
+
+    @include respond-below($breakpoint-sm) {
+      font-size: 32px;
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    line-height: 150%;
+    color: $color-text-p;
+    margin-bottom: 32px;
+    max-width: 100%;
+
+    @include respond-below($breakpoint-md) {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    @include flex(row, flex-start, center, 16px);
+
+    @include respond-below($breakpoint-md) {
+      justify-content: center;
+    }
+
+    @include respond-below($breakpoint-sm) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+    @include respond-below($breakpoint-sm) {
+      width: 100%;
+      text-align: center;
+    }
+
+    &--primary {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background-color: $color-primary-hover;
+      }
+    }
+
+    &--outlined {
+      background-color: transparent;
+      color: $color-heading;
+      border: 1px solid $color-border;
+
+      &:hover {
+        background-color: $color-bg-light;
+      }
+    }
+  }
+
+  &__image {
+    flex: 1;
+    max-width: 560px;
+
+    @include respond-below($breakpoint-md) {
+      max-width: 400px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

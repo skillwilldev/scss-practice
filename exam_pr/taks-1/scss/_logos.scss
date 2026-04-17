@@ -1,0 +1,36 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// ==============================
+// Social Proof / Logos Section
+// ==============================
+.logos {
+  padding: 40px 0;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+
+  &__inner {
+    @include grid() {
+      column-gap: 0px;
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    img {
+      height: 28px;
+      width: auto;
+
+      @include respond-below($breakpoint-sm) {
+        height: 22px;
+      }
+    }
+  }
+}

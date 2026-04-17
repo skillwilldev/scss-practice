@@ -1,0 +1,100 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  padding: 16px 0;
+  border-bottom: 1px solid $color-border;
+  background: $color-white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__inner {
+    @include flex(row, space-between, center);
+  }
+
+  &__left {
+    @include flex(row, flex-start, center, 40px);
+  }
+
+  &__logo {
+    @include flex(row, flex-start, center, 10px);
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+
+    img {
+      width: 156px;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    @include flex(row, flex-start, center, 28px);
+
+    @include respond-below($breakpoint-pg) {
+      display: none;
+    }
+  }
+
+  &__nav-link {
+    font-size: 16px;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    line-height: 150%;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__actions {
+    @include flex(row, flex-start, center, 16px);
+
+    @include respond-below($breakpoint-pg) {
+      display: none;
+    }
+  }
+
+  &__login {
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    color: $color-text;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__cta {
+    font-size: 14px;
+    font-weight: $font-weight-medium;
+    padding: 10px 22px;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &__burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    @include respond-below($breakpoint-pg) {
+      display: block;
+    }
+  }
+}

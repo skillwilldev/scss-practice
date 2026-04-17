@@ -1,0 +1,49 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  padding: 48px 0;
+  border-top: 1px solid $color-border;
+
+  &__inner {
+    @include flex(column, center, center, 20px);
+    text-align: center;
+  }
+
+  &__logo {
+    @include flex(row, center, center, 10px);
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+
+    img {
+      width: 156px;
+      height: auto;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: $color-text-p;
+  }
+
+  &__socials {
+    @include flex(row, center, center, 20px);
+  }
+
+  &__social-link {
+    display: flex;
+    color: $color-text;
+    transition: color 0.2s ease;
+
+    img {
+      width: 20px;
+      height: 20px;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover img {
+      opacity: 1;
+    }
+  }
+}

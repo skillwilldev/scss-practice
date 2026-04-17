@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon UI - Take your website to the next level</title>
+    <meta name="description" content="Horizon UI - the trendiest Tailwind CSS templates for dashboards and websites.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --font-family-jakarta: "Plus Jakarta Sans", sans-serif;
+            --font-family-sans: "Plus Jakarta Sans", sans-serif;
+
+            --color-brand-50: #F4F7FE;
+            --color-brand-100: #E9E3FF;
+            --color-brand-500: #4318FF;
+            --color-brand-600: #3311DB;
+
+            --color-navy-700: #384262;
+            --color-navy-800: #2B3674;
+            --color-navy-900: #1B2559;
+
+            --color-grayText: #A3AED0;
+
+            --max-width-content: 1140px;
+            --breakpoint-tablet: 900px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-navy-800 antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-content mx-auto flex items-center justify-between px-6 py-4">
+            <a href="#" class="flex items-center gap-2">
+                <img src="img/main_logo-on_header.png" alt="Horizon UI Logo" class="h-8">
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-navy-800">
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Product</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Features</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Pricing</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Company</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <a href="#"
+                    class="text-sm font-medium text-navy-800 hover:text-brand-500 transition-colors duration-200">Log
+                    In</a>
+                <a href="#"
+                    class="text-sm font-semibold text-[#4318FF] bg-[#E9E3FF] hover:bg-[#E9E3FF] px-5 py-2.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-brand-500/30">Sign
+                    Up</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="bg-white overflow-hidden">
+        <div class="max-w-content mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 flex flex-col items-start">
+                <div
+                    class="flex items-center gap-2 bg-brand-50 text-brand-500 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+                    <img src="img/icon-TRENDIEST_TAILWIND_TEMPLATES.svg" alt="" class="w-4 h-4">
+                    <span>Trendiest Tailwind Templates</span>
+                </div>
+                <h1 class="text-4xl md:text-[44px] leading-tight font-bold tracking-tight text-navy-900 mb-5">Take your
+                    website to the next level with Horizon UI</h1>
+                <p class="text-grayText text-base leading-relaxed mb-8 max-w-md">Save hundreds of hours trying to
+                    create and develop a dashboard from scratch. The fastest, most responsive &amp; trendiest dashboard
+                    is here. Seriously.</p>
+                <div class="flex items-center gap-4 flex-wrap">
+                    <a href="#"
+                        class="bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-brand-500/30">Get
+                        started now</a>
+                    <a href="#"
+                        class="flex items-center gap-2 text-navy-800 font-semibold text-sm hover:text-brand-500 transition-colors duration-200">
+                        <img src="img/icon-Book_a_free_call.svg" alt="" class="w-5 h-5">
+                        Book a free call
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-brand-100 to-brand-50 rounded-3xl -rotate-3 scale-105">
+                    </div>
+                    <img src="img/1_section_right_image.png" alt="Dashboard Preview"
+                        class="relative rounded-3xl shadow-2xl shadow-brand-500/10 max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-white">
+        <div class="max-w-content mx-auto px-6 py-16 md:py-24">
+            <div class="text-center max-w-xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-navy-900 mb-4">How Horizon works?</h2>
+                <p class="text-grayText text-base leading-relaxed">Tellus rutrum tellus pellentesque eu tincidunt tortor
+                    condimentum.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-center gap-8 lg:gap-6">
+                <div class="flex items-start max-w-xs gap-[18px]">
+                    <div
+                        class="w-12 h-12 shrink-0 rounded-full bg-brand-500 text-white flex items-center justify-center text-sm font-bold">
+                        1</div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Create your Account</h3>
+                        <p class="text-grayText text-sm leading-relaxed">Condimentum vitl pellentesque habitant morbi
+                            tristique senectus.</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center pt-2 shrink-0">
+                    <img src="img/arrow-right_2_section.svg" alt="arrow" class="w-6 h-6 opacity-40">
+                </div>
+                <div class="flex items-start max-w-xs gap-[18px]">
+                    <div
+                        class="w-12 h-12 shrink-0 rounded-full  border-2 border-brand-500 text-brand-500 flex items-center justify-center text-sm font-bold">
+                        2</div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Setup your Account</h3>
+                        <p class="text-grayText text-sm leading-relaxed">Condimentum vitl pellentesque habitant morbi
+                            tristique senectus.</p>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center pt-2 shrink-0">
+                    <img src="img/arrow-right_2_section.svg" alt="arrow" class="w-6 h-6 opacity-40">
+                </div>
+                <div class="flex items-start max-w-xs gap-[18px]">
+                    <div
+                        class="w-12 h-12 shrink-0 rounded-full bg-white border-2 border-brand-500 text-brand-500 flex items-center justify-center text-sm font-bold">
+                        3</div>
+                    <div class="flex flex-col">
+                        <h3 class="text-base font-bold text-navy-900 mb-2">Start creating with Horizon</h3>
+                        <p class="text-grayText text-sm leading-relaxed">Condimentum vitl pellentesque habitant morbi
+                            tristique senectus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-50/50">
+        <div class="max-w-content mx-auto px-6 py-16 md:py-24">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:p-10 gap-8">
+                <div
+                    class="bg-white rounded-3xl p-6 text-center shadow-sm hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <img src="img/Share team inboxes-icon.svg" alt="Inboxes" class="w-full h-full">
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-3">Share team inboxes</h3>
+                    <p class="text-grayText text-sm leading-relaxed">Whether you have a team of 2 or 200, our shared
+                        team inboxes keep everyone on the same page and in the loop.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-10 text-center shadow-sm hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <img src="img/Analytics dashboard-icon.svg" alt="Analytics" class="w-full h-full">
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-3">Analytics dashboard</h3>
+                    <p class="text-grayText text-sm leading-relaxed">Whether you have a team of 2 or 200, our shared
+                        team inboxes keep everyone on the same page and in the loop.</p>
+                </div>
+                <div
+                    class="bg-white rounded-3xl p-10 text-center shadow-sm hover:shadow-xl hover:shadow-brand-500/5 transition-all duration-300 group">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-brand-500 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <img src="img/Deliver_instant_answer-icon.svg" alt="Instant Answer" class="w-full h-full">
+                    </div>
+                    <h3 class="text-lg font-bold text-navy-900 mb-3">Deliver instant answer</h3>
+                    <p class="text-grayText text-sm leading-relaxed">Whether you have a team of 2 or 200, our shared
+                        team inboxes keep everyone on the same page and in the loop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="max-w-content mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-navy-900 mb-3">Boost your workflow with
+                    Horizon</h2>
+                <p class="text-grayText text-base leading-relaxed mb-10 max-w-md">Justo eu condimentum a tellus
+                    interdum nulll lacus interdum eu tincidunt tortor aliquam nulla ac cras fermentum odio.</p>
+                <div class="grid grid-cols-2 gap-y-8 gap-x-10">
+                    <div>
+                        <p class="text-3xl md:text-4xl font-extrabold text-navy-900 mb-1">340+</p>
+                        <p class="text-sm font-bold text-navy-800 mb-1">Successful Projects</p>
+                        <p class="text-grayText text-xs leading-relaxed">Aenean consectetur a tellus interdum nullam
+                            lacus tellus interdum nullam lacus.</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-extrabold text-navy-900 mb-1">$10m</p>
+                        <p class="text-sm font-bold text-navy-800 mb-1">Annual Percentage Rate</p>
+                        <p class="text-grayText text-xs leading-relaxed">Ut a curabitur commodo tellus rutrum tellus
+                            pellentesque eu viverra auctor.</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-extrabold text-navy-900 mb-1">2.8k+</p>
+                        <p class="text-sm font-bold text-navy-800 mb-1">Clients Worldwide</p>
+                        <p class="text-grayText text-xs leading-relaxed">Aenean consectetur a tellus interdum nullam
+                            lacus tellus interdum nullam lacus.</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl md:text-4xl font-extrabold text-navy-900 mb-1">7000+</p>
+                        <p class="text-sm font-bold text-navy-800 mb-1">Daily Visits</p>
+                        <p class="text-grayText text-xs leading-relaxed">Ut a curabitur commodo tellus rutrum tellus
+                            pellentesque eu viverra auctor.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="img/right-imgBoost your workflow with Horizon_3-section.png" alt="Lightning Bolt Illustration"
+                    class="rounded-3xl max-w-full h-auto shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-100">
+        <div class="max-w-content mx-auto px-6 py-12 flex flex-col items-center text-center">
+            <a href="#" class="flex items-center gap-2 mb-6">
+                <img src="img/main_logo-on_header.png" alt="Horizon UI Logo" class="h-8">
+            </a>
+            <ul class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-grayText mb-8">
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">About</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Features</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Blog</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Resources</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Partners</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Help</a></li>
+                <li><a href="#" class="hover:text-brand-500 transition-colors duration-200">Terms</a></li>
+            </ul>
+            <div class="flex items-center gap-5 mb-8">
+                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity duration-200"><img
+                        src="img/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
+                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity duration-200"><img
+                        src="img/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
+                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity duration-200"><img
+                        src="img/Github.svg" alt="GitHub" class="w-5 h-5"></a>
+                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity duration-200"><img
+                        src="img/linkdin.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                <a href="#" class="opacity-50 hover:opacity-100 transition-opacity duration-200"><img
+                        src="img/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+            </div>
+            <p class="text-grayText text-sm">&copy; 2024 Horizon UI Library. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
